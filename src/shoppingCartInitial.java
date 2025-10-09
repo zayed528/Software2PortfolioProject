@@ -1,7 +1,7 @@
 /**
  * Initial version of Shopping Cart class.
  */
-public class shoppingCartInitial {
+public class shoppingCartInitial{
 
     /**
      * Inner class representing an item in the shopping cart.
