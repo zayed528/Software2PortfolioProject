@@ -8,6 +8,16 @@ the following form: YYYY.0M.0D.
 
 ## [Unreleased]
 
+## [2025.10.08]
+
+### Added
+
+- Designed a proof of concept for Shopping Cart component.
+
+### Updated
+
+- Changed design to include
+
 ## [2024.12.30]
 
 - Added table-based rubrics to all 6 parts of the project
@@ -29,6 +39,15 @@ the following form: YYYY.0M.0D.
   project
 - Added information about how to make a pull request to every part of the
   project
+
+  ## [2025.09.19]
+
+  ### Added
+
+  - Designed a Music Playlist component
+  - Designed a Meal Planner component
+  - Designed a Shopping Cart component
+  ```
 
 ### Changed
 
