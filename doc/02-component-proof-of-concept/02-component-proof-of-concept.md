@@ -165,15 +165,34 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
-## YYYY.MM.DD
+## 2025.11.02
 
-### Added
+I selected the **Shopping Cart** component for my proof-of-concept implementation for the following reasons:
 
-- Designed a proof of concept for <!-- insert name of component here --> component
+**Clear Real-World Application**: Shopping carts are a fundamental component of e-commerce systems that I interact with regularly. This familiarity helped me quickly identify core behaviors (adding items, viewing cart contents, calculating totals, removing items) without extensive domain research.
 
-### Updated
+**Feasibility & Time Management**: Given the assignment constraints, the shopping cart design struck the right balance:
+- Core data structures (ArrayList for items, simple Item class) are straightforward to implement
+- The operations map cleanly to methods I'm comfortable implementing
+- Edge cases (empty carts, item removal, price calculations) are intuitive to reason about
 
-- Changed design to include ...
+**Demonstration of Component Value**: The shopping cart naturally showcases practical value in a main method. I can demonstrate:
+- Adding multiple items with different quantities
+- Calculating running totals (essential for any cart)
+- Viewing cart contents in a user-friendly format
+- Removing unwanted items
+
+**Adaptability to OSU Discipline**: My initial implementation uses a single class, but the design has clear paths to refactor into:
+- Kernel methods: `addItem()`, `removeItem()`, `getTotalPrice()`
+- Secondary methods: `viewCart()`, potential future methods like `applyDiscount()`, `isEmpty()`, `clearCart()`
+- The Item inner class can be extracted and refined as needed
+
+**Technical Confidence**: I chose this design because I'm confident I can extend it with:
+- More sophisticated item management (updating quantities, searching by name)
+- Additional features (discount codes, tax calculations, item categories)
+- Proper validation and error handling
+
+**Why Not Other Designs**: I considered more complex components but ultimately chose the shopping cart because it provides sufficient complexity to demonstrate competency while remaining manageable within the assignment timeframe.
 
 ```
 
