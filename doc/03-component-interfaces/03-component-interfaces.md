@@ -1,8 +1,8 @@
 # Portfolio Part 3: Component Interfaces
 
-- **Name**: Zayed Ali
-- **Dot Number**: ali.1189
-- **Due Date**: November 2, 11:59 PM
+- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
+- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
+- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
 
 ## Assignment Overview
 
@@ -132,31 +132,7 @@ hierarchy diagram using whatever tools you would like. Then, include a picture
 of it in this folder. You may also embed it just below using markdown syntax
 (i.e., `![ALT TEXT](path/to/file)`).
 
-                ┌─────────────────────────┐
-                │ Standard<ShoppingCart>  │
-                └───────────┬─────────────┘
-                            │ extends
-                            ↓
-                ┌─────────────────────────┐
-                │  ShoppingCartKernel     │  ← Kernel Interface
-                └───────────┬─────────────┘
-                            │ extends
-                            ↓
-                ┌─────────────────────────┐
-                │     ShoppingCart        │  ← Enhanced Interface
-                └───────────┬─────────────┘
-                            │ implements
-                ┌───────────┴────────────┐
-                │                        │
-                ↓                        ↓
-    ┌─────────────────────┐  ┌─────────────────────┐
-    │ ShoppingCartSecondary│  │   ShoppingCart1     │
-    └──────────┬────────────┘  └─────────────────────┘
-               │ extends
-               ↓
-    ┌─────────────────────┐
-    │  ShoppingCart1L     │
-    └─────────────────────┘
+<!-- TODO: make a diagram of your component hierarchy then delete this comment -->
 
 To start making your interfaces, make a branch off of main in your new repo
 called something like `interfaces`. There are many ways to do this, but my
