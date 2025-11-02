@@ -8,6 +8,22 @@ the following form: YYYY.0M.0D.
 
 ## [Unreleased]
 
+## 2025.11.02
+
+### Added
+- Added Main Method
+- Designed kernel and enhanced interfaces for Shopping Cart component
+- Created `ShoppingCartKernel` interface with core methods: addItem, removeItem, getTotalPrice, size, contains
+- Created `ShoppingCart` enhanced interface with secondary methods: isEmpty, updateQuantity, getQuantity, getDiscountedTotal
+- Created `Standard<T>` interface providing basic object operations (newInstance, clear, transferFrom)
+- Added component hierarchy diagram to documentation
+
+### Updated
+- Updated 02-component-proof-of-concept.md to add Initial Proof of concept
+- Updated addItems() in ShoppingCartInitial.java
+- Updated component design to follow OSU discipline with proper interface hierarchy
+- Added full JavaDoc documentation with design-by-contract annotations (@requires, @ensures, @updates, @clears)
+
 ## [2025.10.08]
 
 ### Added
