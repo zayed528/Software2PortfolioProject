@@ -111,8 +111,37 @@ Below is further rationale/explanation for the rubric items above:
 > to create a new design. In you do end up picking one at random, you should
 > disclose that here as well.
 
-<!-- TODO: briefly argue your choice of design or design something
-new; then delete this comment -->
+### Design Choice Justification
+
+I selected the **Shopping Cart** component for my proof-of-concept implementation for the following reasons:
+
+**Clear Real-World Application**: Shopping carts are a fundamental component of e-commerce systems that I interact with regularly. This familiarity helped me quickly identify core behaviors (adding items, viewing cart contents, calculating totals, removing items) without extensive domain research.
+
+**Feasibility & Time Management**: Given the assignment constraints, the shopping cart design struck the right balance:
+- Core data structures (ArrayList for items, simple Item class) are straightforward to implement
+- The operations map cleanly to methods I'm comfortable implementing
+- Edge cases (empty carts, item removal, price calculations) are intuitive to reason about
+
+**Demonstration of Component Value**: The shopping cart naturally showcases practical value in a main method. I can demonstrate:
+- Adding multiple items with different quantities
+- Calculating running totals (essential for any cart)
+- Viewing cart contents in a user-friendly format
+- Removing unwanted items
+
+**Adaptability to OSU Discipline**: My initial implementation uses a single class, but the design has clear paths to refactor into:
+- Kernel methods: `addItem()`, `removeItem()`, `getTotalPrice()`
+- Secondary methods: `viewCart()`, potential future methods like `applyDiscount()`, `isEmpty()`, `clearCart()`
+- The Item inner class can be extracted and refined as needed
+
+**Technical Confidence**: I chose this design because I'm confident I can extend it with:
+- More sophisticated item management (updating quantities, searching by name)
+- Additional features (discount codes, tax calculations, item categories)
+- Proper validation and error handling
+
+**Limitations Acknowledged**: I recognize that my current implementation has room for improvement (e.g., `removeItem()` has a bug where it tries to remove a String from an ArrayList of Items, and I'm using `double` for prices which isn't ideal for currency). However, these are fixable issues that don't invalidate the core design—they actually prove that the POC serves its purpose of revealing areas for refinement.
+
+**Why Not Other Designs**: I considered more complex components but ultimately chose the shopping cart because it provides sufficient complexity to demonstrate competency while remaining manageable within the assignment timeframe.
+
 
 > Once you've argued your choice of design, make a branch in your new repo called
 > something like `proof-of-concept`. There are many ways to do this, but my

@@ -1,7 +1,8 @@
+package components;
 /**
  * Initial version of Shopping Cart class.
  */
-public class shoppingCartInitial {
+public class ShoppingCartInitial {
 
     /**
      * Inner class representing an item in the shopping cart.
@@ -71,7 +72,7 @@ public class shoppingCartInitial {
     /**
      * Constructor for ShoppingCart class.
      */
-    public shoppingCartInitial() {
+    public ShoppingCartInitial() {
         this.items = new java.util.ArrayList<>();
     }
 
@@ -80,7 +81,8 @@ public class shoppingCartInitial {
      *
      * @param item Item to be added.
      */
-    public void addItem(Item item) {
+    public void addItem(String name, double price, int quantity) {
+        Item item = new Item(name, price, quantity);
         this.items.add(item);
     }
 
@@ -102,7 +104,8 @@ public class shoppingCartInitial {
      */
     public void viewCart() {
         for (Item item : this.items) {
-            System.out.println("Item: " + item.getName() + ", Price: " + item.getPrice() + ", Quantity: " + item.getQuantity());
+            System.out.println("Item: " + item.getName() + ", Price: " +
+            item.getPrice() + ", Quantity: " + item.getQuantity());
         }
     }
 
