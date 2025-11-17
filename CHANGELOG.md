@@ -8,6 +8,26 @@ the following form: YYYY.0M.0D.
 
 ## [Unreleased]
 
+## 2025.11.16
+
+### Added
+
+- Created `ShoppingCartSecondary` abstract class implementing all secondary methods
+- Implemented `isEmpty()` using kernel method `size()`
+- Implemented `updateQuantity()` using kernel methods `contains()`, `removeItem()`, `addItem()`, and `getQuantity()`
+- Implemented `getDiscountedTotal()` using kernel method `getTotalPrice()`
+- Implemented common Object methods: `toString()`, `equals()`, and `hashCode()` using kernel methods only
+
+## Updated
+
+- Added design-by-contract assertion checks for all method preconditions
+- Documented design limitation: `getQuantity()` cannot be fully implemented without additional kernel support
+
+### Notes
+
+- All secondary methods respect kernel method contracts and check preconditions
+- `getQuantity()` throws `UnsupportedOperationException` as it reveals a kernel interface design gap
+
 ## 2025.11.02
 
 ### Added
