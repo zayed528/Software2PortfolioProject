@@ -8,6 +8,18 @@ the following form: YYYY.0M.0D.
 
 ## [Unreleased]
 
+## 2025.12.08
+
+### Added
+
+- Designed kernel implementation for ShoppingCart component
+- Created `ShoppingCart1L` class implementing ShoppingCart with HashMap representation
+- Created `ShoppingCartSecondary` abstract class with layered secondary method implementations
+- Implemented all kernel methods (addItem, removeItem, getTotalPrice, size, contains, getPrice, getQuantity)
+- Implemented all Standard methods (clear, newInstance, transferFrom)
+- Implemented Iterator interface for traversing cart items
+- Added convention and correspondence documentation to kernel implementation
+
 ## 2025.11.02
 
 ### Added

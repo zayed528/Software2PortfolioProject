@@ -1,8 +1,8 @@
 # Portfolio Part 5: Kernel Implementation
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Zayed Ali <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
+- **Dot Number**:ali.1189 <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
+- **Due Date**: December 10 11:59 PM<!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
 
 ## Assignment Overview
 
@@ -120,7 +120,28 @@ Below is further rationale/explanation for the rubric items above:
 > discuss how that representation will be restricted (i.e., by convention)
 > and interpreted (i.e., by correspondence).
 
-<!-- TODO: select a representation and explain why -->
+<### Representation Selection
+
+For my ShoppingCart kernel implementation, I will use a **HashMap<String, Item>** where:
+- The key is the item name (String)
+- The value is an Item object containing name, price, and quantity
+
+**Justification:**
+- HashMap provides O(1) average time complexity for add, remove, and contains operations
+- Using item name as the key naturally enforces uniqueness (no duplicate items)
+- Easy to implement getTotalPrice by iterating through values
+- The Item helper class keeps related data together
+
+**Convention:**
+- All item names in the map must be non-null and non-empty
+- All prices must be >= 0.0
+- All quantities must be > 0
+- No duplicate items (enforced by HashMap key uniqueness)
+
+**Correspondence:**
+- this.items corresponds to the set of keys in the HashMap
+- this.quantities corresponds to the quantity field in each Item value
+- An item exists in the cart if and only if its name is a key in the HashMap
 
 > To start making your kernel implementation, make a branch off of main in your
 > new repo called something like `kernel-implementation`. There are many ways to
@@ -182,7 +203,7 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
-- Designed kernel implementation for <!-- insert name of component here --> component
+- Designed kernel implementation for ShoppingCart component
 
 ### Updated
 
