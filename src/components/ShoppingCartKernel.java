@@ -71,4 +71,28 @@ public interface ShoppingCartKernel extends Standard<ShoppingCart> {
      * @ensures contains = (name is in this.items)
      */
     boolean contains(String name);
+
+    /**
+     * Returns the price of a specific item.
+     *
+     * @param name
+     *            the name of the item
+     * @return the price of the item
+     * @requires name is in this.items
+     * @ensures getPrice = price of item named 'name'
+     */
+    double getPrice(String name);
+
+    /**
+     * Returns the quantity of a specific item.
+     *
+     * @param name
+     *            the name of the item
+     * @return the quantity of the item
+     * @requires name is in this.items
+     * @ensures getQuantity = quantity of item named 'name'
+     */
+    int getQuantity(String name);
+
+
 }

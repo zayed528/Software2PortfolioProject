@@ -8,6 +8,18 @@ the following form: YYYY.0M.0D.
 
 ## [Unreleased]
 
+## 2025.12.08
+
+### Added
+
+- Designed kernel implementation for ShoppingCart component
+- Created `ShoppingCart1L` class implementing ShoppingCart with HashMap representation
+- Created `ShoppingCartSecondary` abstract class with layered secondary method implementations
+- Implemented all kernel methods (addItem, removeItem, getTotalPrice, size, contains, getPrice, getQuantity)
+- Implemented all Standard methods (clear, newInstance, transferFrom)
+- Implemented Iterator interface for traversing cart items
+- Added convention and correspondence documentation to kernel implementation
+
 ## 2025.11.16
 
 ### Added
@@ -18,7 +30,7 @@ the following form: YYYY.0M.0D.
 - Implemented `getDiscountedTotal()` using kernel method `getTotalPrice()`
 - Implemented common Object methods: `toString()`, `equals()`, and `hashCode()` using kernel methods only
 
-## Updated
+### Updated
 
 - Added design-by-contract assertion checks for all method preconditions
 - Documented design limitation: `getQuantity()` cannot be fully implemented without additional kernel support
@@ -31,6 +43,7 @@ the following form: YYYY.0M.0D.
 ## 2025.11.02
 
 ### Added
+
 - Added Main Method
 - Designed kernel and enhanced interfaces for Shopping Cart component
 - Created `ShoppingCartKernel` interface with core methods: addItem, removeItem, getTotalPrice, size, contains
@@ -39,6 +52,7 @@ the following form: YYYY.0M.0D.
 - Added component hierarchy diagram to documentation
 
 ### Updated
+
 - Updated 02-component-proof-of-concept.md to add Initial Proof of concept
 - Updated addItems() in ShoppingCartInitial.java
 - Updated component design to follow OSU discipline with proper interface hierarchy
@@ -83,6 +97,9 @@ the following form: YYYY.0M.0D.
   - Designed a Music Playlist component
   - Designed a Meal Planner component
   - Designed a Shopping Cart component
+
+  ```
+
   ```
 
 ### Changed
