@@ -1,4 +1,5 @@
 package components;
+
 import components.standard.Standard;
 
 /**
@@ -6,7 +7,8 @@ import components.standard.Standard;
  *
  * @author Zayed Ali
  */
-public interface ShoppingCart extends ShoppingCartKernel , Standard<ShoppingCart> {
+public interface ShoppingCart
+        extends ShoppingCartKernel, Standard<ShoppingCart> {
 
     /**
      * Checks if the shopping cart is empty.
@@ -19,8 +21,10 @@ public interface ShoppingCart extends ShoppingCartKernel , Standard<ShoppingCart
     /**
      * Updates the quantity of an existing item.
      *
-     * @param name the item name
-     * @param newQuantity the new quantity
+     * @param name
+     *            the item name
+     * @param newQuantity
+     *            the new quantity
      * @requires name is in cart and newQuantity > 0
      * @ensures quantity of item 'name' = newQuantity
      * @updates this
@@ -30,20 +34,24 @@ public interface ShoppingCart extends ShoppingCartKernel , Standard<ShoppingCart
     /**
      * Returns the quantity of a specific item.
      *
-     * @param name the item name
+     * @param name
+     *            the item name
      * @return the quantity
      * @requires name is in cart
      * @ensures getQuantity = quantity of item 'name'
      */
+    @Override
     int getQuantity(String name);
 
     /**
      * Applies a discount to the total.
      *
-     * @param discountPercent discount percentage (0-100)
+     * @param discountPercent
+     *            discount percentage (0-100)
      * @return discounted total
      * @requires 0 <= discountPercent <= 100
      * @ensures result = getTotalPrice() * (1 - discountPercent/100)
      */
     double getDiscountedTotal(double discountPercent);
+
 }

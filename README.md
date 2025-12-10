@@ -1,90 +1,149 @@
-# Portfolio Project
+# ShoppingCart Component
 
-The purpose of this repo is to provide a framework for creating your own
-component in the software sequence discipline. If you were unsure whether
-or not to make your own, consider the following testimonial:
+A software component implementing a shopping cart in the OSU software sequence discipline. This component provides a robust, contract-based API for managing shopping cart operations with a HashMap-based implementation.
 
-> I really enjoyed the portfolio project! It gave me a stronger understanding
-> of the OSU software discipline while also giving me the flexibility to
-> design something that reflected my interests. This made the experience
-> rewarding and enjoyable as I created a product I was proud of!
+## Component Overview
 
-## Recommended Steps to Get Started
+The **ShoppingCart** component models a shopping cart that can hold multiple items, each with a name, price, and quantity. It follows the OSU software discipline with formal contracts, separation of kernel and secondary methods, and layered implementations.
 
-When starting your portfolio project, the following steps should make your life
-a bit easier.
+### Features
 
-### Step 1: Create a Repo From This Template
+- Add, remove, and update items in the cart
+- Calculate total price with optional discounts
+- Query cart contents (size, contains, item details)
+- Full design-by-contract specifications
+- Comprehensive JUnit test coverage
+- Iterator support for traversing items
 
-<!-- TODO: use GitHub to create a repo from this template -->
+## Component Structure
 
-Assuming you're reading this README from GitHub, you can make use of this
-repo by clicking the `Use this template` button in the top-right corner of
-this page. If you can't find the button, [this link][use-this-template] 
-should work as well. Personally, I would recommend using the 
-`Create a new repository` option, which will allow you to name the 
-repository after your component. Given that you will be submitting pull 
-requests to me through Carmen, you'll want to make sure your repository 
-is public. Then, you can click `Create repository`. After that, you can 
-go through all the usual steps of cloning a repository on your system to 
-get to work. I use GitHub Desktop to clone projects, and it has a nice 
-feature of letting you open a repo directly in VSCode from the 
-`Repository` menu.
+```
+src/components/
+├── ShoppingCartKernel.java          # Kernel interface (minimal operations)
+├── ShoppingCart.java                 # Enhanced interface (secondary methods)
+└── standard/
+    ├── ShoppingCartSecondary.java   # Abstract class with layered implementations
+    ├── ShoppingCart1L.java          # HashMap-based kernel implementation
+    └── Standard.java                # Standard interface for all components
 
-### Step 2: Install Recommended Plugins
+test/
+├── ShoppingCart1LTest.java          # Tests for kernel methods (50+ test cases)
+└── ShoppingCartTest.java            # Tests for secondary methods (30+ test cases)
+```
 
-<!-- TODO: install recommended plugins and delete this comment -->
+## Getting Started
 
-When you open VSCode with this project, you should get a notification in the
-bottom right corner that there are some recommended extensions to install.
-Click install all. If you ignored this message or it never came up, feel free
-to press CTRL+SHIFT+P and type "Show Recommended Extensions". Install all of the
-extensions listed.
+### Prerequisites
 
-### Step 3: Install the Latest JDK
+- Java Development Kit (JDK) 11 or higher
+- JUnit 4.13.2 (included in `lib/`)
+- Hamcrest Core 1.3 (included in `lib/`)
+- Components library (included in `lib/`)
 
-<!-- TODO: install latest JDK and delete this comment -->
+### Example Usage
 
-If you do not have an available JDK on your system, you may be prompted to
-install one by VSCode. The default seems to be Red Hat's OpenJDK, which seems to
-require you to register for an account or to install on the command line.
-Regardless, there is no mac support. As a result, I would just recommend
-installing the latest JDK [directly from Oracle's site][jdk-downloads].
+```java
+import components.ShoppingCart;
+import components.standard.ShoppingCart1L;
 
-### Step 4: Add Key Libraries to Project
+public class Example {
+    public static void main(String[] args) {
+        ShoppingCart cart = new ShoppingCart1L();
 
-<!-- TODO: add key libraries to project and delete this comment -->
+        // Add items
+        cart.addItem("Apple", 0.99, 5);
+        cart.addItem("Banana", 0.59, 3);
 
-As you are probably all aware at this point, you need the components jar to get
-anything running. My advice is to [download it from here][components-jar]. Then,
-drop it into the `lib` folder in the project. Git automatically ignores anything
-you put here by default, so don't worry about committing it to version control.
+        // Get total
+        double total = cart.getTotalPrice(); // 6.72
 
-Similarly, you will need the testing APIs (e.g., JUnit). Perhaps the easiest way
-to include them in your project is to click the beaker symbol in the left
-sidebar; it's right below the extensions button which looks like four squares.
-If you do not see this button, try creating a Java file in `src`. From there, 
-you can click "Enable Java Tests" and then click "JUnit" from the
-dropdown. That's it! You should now see the two JUnit libraries in the lib
-folder.
+        // Apply discount
+        double discounted = cart.getDiscountedTotal(10.0); // 6.048
 
-**Note**: if you're using VSCode for class projects, you might be wondering
-why you never had to do this. In general, it's bad practice to commit binaries
-to version control. However, we have no way of managing dependencies with the
-custom `components.jar`, so I included them directly in the template. I did not
-include them here, so you could see how it might be done from scratch. If at any
-point you're struggling with Step 3, just copy the lib folder from the monorepo
-template.
+        // Check contents
+        System.out.println(cart.size()); // 2
+        System.out.println(cart.contains("Apple")); // true
 
-## Next Steps
+        // Update quantity
+        cart.updateQuantity("Apple", 10);
+        System.out.println(cart.getQuantity("Apple")); // 10
+    }
+}
+```
 
-<!-- TODO: navigate to part 1 of the portfolio project and delete this comment -->
+### Use Cases
 
-Now that you have everything setup, you can begin crafting your component. There
-will be deadlines for each step in Carmen, but you're free to complete each step
-as early as you'd like. To start, you'll want to visit the [doc](doc/) directory
-for each assignment file.
+Two demonstration programs are provided in `src/`:
 
-[components-jar]: https://cse22x1.engineering.osu.edu/common/components.jar
-[jdk-downloads]: https://www.oracle.com/java/technologies/downloads/
-[use-this-template]: https://github.com/new?template_name=portfolio-project&template_owner=jrg94
+1. **GroceryCheckout.java** - Simple grocery store checkout system demonstrating basic cart operations (add, update, remove items, apply discounts)
+2. **OnlineStoreDemo.java** - Advanced online shopping demo with membership tiers (Bronze/Silver/Gold) showcasing different discount scenarios and bulk purchases
+
+Run these files to see the component in action!
+
+## Running Tests
+
+Tests use JUnit 4. In VSCode with the Java Test Runner extension:
+
+1. Open the Testing sidebar (beaker icon)
+2. Click the play button to run all tests
+3. View detailed results in the Test Explorer
+
+All test files include comprehensive edge cases:
+
+- Empty cart operations
+- Single and multiple item scenarios
+- Boundary values (zero prices, maximum quantities)
+- State verification after operations
+
+## Design Decisions
+
+- **Representation**: HashMap chosen for O(1) average-case lookup performance by item name
+- **Item Storage**: Internal `Item` class encapsulates name, price, and quantity as a single unit
+- **Quantity Accumulation**: When adding an existing item, quantities are accumulated rather than replaced
+- **Secondary Methods**: All secondary methods are layered on kernel methods following OSU discipline principles
+- **Immutability**: Item names serve as immutable keys; prices and quantities can be modified
+
+## API Documentation
+
+Complete documentation for all methods is available in the source code using JavaDoc format. Key contracts include:
+
+### Kernel Methods
+
+- **addItem(name, price, quantity)**: Requires price ≥ 0.0 and quantity > 0
+- **removeItem(name)**: Requires item exists in cart
+- **getTotalPrice()**: Returns sum of (price × quantity) for all items
+- **size()**: Returns number of distinct items
+- **contains(name)**: Checks if item exists
+- **getPrice(name)**: Requires item exists; returns item price
+- **getQuantity(name)**: Requires item exists; returns item quantity
+
+### Secondary Methods
+
+- **isEmpty()**: Returns true if cart has no items
+- **updateQuantity(name, newQuantity)**: Requires item exists and newQuantity > 0
+- **getDiscountedTotal(discountPercent)**: Requires 0 ≤ discountPercent ≤ 100
+
+### Standard Methods
+
+- **clear()**: Removes all items
+- **newInstance()**: Creates a new empty cart
+- **transferFrom(source)**: Transfers contents from source to this
+
+## Testing Coverage
+
+- **ShoppingCart1LTest.java**: 50+ test cases covering all kernel methods
+- **ShoppingCartTest.java**: 30+ test cases covering all secondary methods
+- Edge cases include: empty carts, single items, multiple items, boundary values, state verification
+
+## Author
+
+**Zayed Ali**
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+Created to learn and have fun by building this project. This could have happened
+only with the help of Dr Jeremy Grifski.
