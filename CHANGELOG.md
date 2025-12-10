@@ -8,6 +8,25 @@ the following form: YYYY.0M.0D.
 
 ## [Unreleased]
 
+## 2025.12.10
+
+### Added
+
+- Designed comprehensive test suite for ShoppingCart component
+- Created `ShoppingCart1LTest.java` with 50+ test cases covering all kernel methods
+- Created `ShoppingCartTest.java` with 30+ test cases covering all secondary methods
+- Designed two qualitatively different use cases for ShoppingCart component
+- Created `GroceryCheckout.java` demonstrating grocery store checkout operations
+- Created `OnlineStoreDemo.java` demonstrating online shopping with membership tiers
+- Added JUnit 4.13.2 and Hamcrest Core 1.3 libraries to lib/ directory
+
+### Updated
+
+- Polished code documentation and formatting across all source files
+- Verified CheckStyle compliance for entire codebase
+- Updated root README.md with comprehensive component documentation
+- Organized test files into proper test/ directory structure
+
 ## 2025.12.08
 
 ### Added

@@ -1,8 +1,8 @@
 # Portfolio Part 6: Finishing Touches
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Zayed Ali
+- **Dot Number**: ali.1189
+- **Due Date**: December 10 11:59 PM
 
 ## Assignment Overview
 
@@ -307,48 +307,77 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I think that my understanding of Software Development has gotten better because
+this is the first time I am building a project that also has testcases which
+helps me understand the importance of testing and also I could follow industry
+standards while programming.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+My knowledge of Object Oriented Programming and also using GitHub got better.
+There were times when I had to use LLMs like ChatGPT to help me when I was stuck
+but it gave me a better understanding of how to program and also I gained
+knowledge.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+Maybe as I have just completed the project and I am happy I will say that I am
+excited and really happy but GitHub branches really annoyed me throughout the
+semester. I will rate it as 9.5/10 in it being fun.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
 > However, there are plenty of other skills you may have picked up through
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
+I picked up several technical and professional skills: (1) Component-based
+software design - learning to separate kernel and enhanced interfaces,
+(2) Design-by-contract programming - writing preconditions and postconditions,
+(3) JUnit testing - creating comprehensive test suites without reference
+implementations, (4) Git version control - managing branches, merging conflicts,
+and creating pull requests, (5) Technical documentation - writing clear README
+files and JavaDoc comments, (6) Self-directed problem-solving - debugging
+issues independently using resources like Stack Overflow and documentation,
+(7) Time management - breaking a multi-week project into manageable milestones,
+and (8) Iterative development - refining designs based on testing and feedback.
 
-<!-- TODO: discuss -->
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+- Designed and implemented a production-ready Java component following
+  design-by-contract principles and object-oriented programming best practices
+- Developed comprehensive JUnit test suite with 80+ test cases achieving full coverage of kernel and secondary methods
+- Created technical documentation including API specifications, usage examples, and README documentation for end users
+- Managed software development lifecycle using Git version control with feature branches, conflict resolution, and pull requests
+- Applied CheckStyle standards and code quality best practices to ensure maintainable, professional-grade code
+- Built reusable shopping cart component with HashMap-based implementation optimized for O(1) lookup performance
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+Well I have 1 more technical project on my resume. So it will help me a lot in
+bagging interviews and it has also boosted my confidence as I know I can build
+components on my own. I loved the topic I chose cuz it was fun and I added so many
+random stuff.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+Jeremy Grifski is probably the best person to contact as I have never had so much
+fun in any other programming class at OSU and I think like I need to pick up
+some front-end skills (basics of React and Figma as I know CSS and HTML) but I
+should also work on ML skills as I am starting a research with Dr Simeng Zhu
+in Jan for detection of Cancer using CV.
 
 ### Changelog
 
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
